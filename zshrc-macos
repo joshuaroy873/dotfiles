@@ -1,0 +1,33 @@
+# --- quick activate venv ---
+venv() {
+    source "$HOME/venv/bin/activate"
+}
+
+# --- JupyterLab quick launcher (activates ~/venv automatically) ---
+alias jlab='source ~/venv/bin/activate && jupyter lab'
+
+# --- activate venv + download 1080p MP4 ---
+ytmp4() {
+    source "$HOME/venv/bin/activate"
+    yt-dlp \
+        -f "bestvideo[height=1080][ext=mp4]+bestaudio[ext=m4a]" \
+        --merge-output-format mp4 \
+        --write-subs \
+        --sub-langs "en.*" \
+        --convert-subs srt \
+        --compat-options no-keep-subs \
+        -o "$HOME/Downloads/%(title)s.%(ext)s" \
+        "$1"
+}
+
+# --- activate venv + download MP3 ---
+ytmp3() {
+    source "$HOME/venv/bin/activate"
+    yt-dlp \
+        -f bestaudio \
+        --extract-audio \
+        --audio-format mp3 \
+        --audio-quality 4 \
+        -o "$HOME/Downloads/%(title)s.%(ext)s" \
+        "$1"
+}
