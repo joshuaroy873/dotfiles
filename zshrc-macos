@@ -1,12 +1,12 @@
-# --- quick activate venv ---
+# Activate venv
 venv() {
     source "$HOME/venv/bin/activate"
 }
 
-# --- JupyterLab quick launcher (activates ~/venv automatically) ---
+# Activate venv + launch JupyterLab
 alias jlab='source ~/venv/bin/activate && jupyter lab'
 
-# --- activate venv + download 1080p MP4 ---
+# Activate venv + download 1080p MP4
 ytmp4() {
     source "$HOME/venv/bin/activate"
     yt-dlp \
@@ -20,7 +20,7 @@ ytmp4() {
         "$1"
 }
 
-# --- activate venv + download MP3 ---
+# Activate venv + download MP3
 ytmp3() {
     source "$HOME/venv/bin/activate"
     yt-dlp \
