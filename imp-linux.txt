@@ -1,0 +1,15 @@
+Logi configuration:
+sudo nano /etc/logid.cfg
+sudo systemctl restart logid <alias: restart-logi>
+
+Aliases:
+jlab - opens jupyter lab using venv, and defaults folder to ~/Documents/Repos - Notebooks
+
+ghoshlab1
+129.74.163.217
+
+ghoshlab2
+129.74.163.122
+
+joshlab
+129.74.163.32
