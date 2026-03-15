@@ -1,0 +1,27 @@
+Host ghoshlab1
+  HostName 129.74.163.217
+  User jpalathi
+
+Host ghoshlab2
+  HostName 129.74.163.122
+  User jpalathi
+
+Host ghoshlab
+  HostName 129.74.163.32
+  User joshua-lab
+
+Host crc2
+  HostName crcfe02.crc.nd.edu
+  User jpalathi
+
+Host crc1
+  HostName crcfe01.crc.nd.edu
+  User jpalathi
+
+Host homelab
+  HostName 100.113.46.113
+  User root
+  
+Host docker
+  HostName 100.108.27.79
+  User joshuaroy873
