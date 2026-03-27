@@ -1,22 +1,22 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 format = "$os$username$directory$git_branch$git_status$character"
 add_newline = false
 
-palette = 'tokyo_like'
+palette = "tokyo_like"
 
 [palettes.tokyo_like]
-cyan = '#9fd6f4'
-pink = '#f776c6'
-green = '#8ef0a1'
-yellow = '#e6d37a'
-red = '#ff757f'
-muted = '#c0caf5'
+cyan = "#9fd6f4"
+pink = "#f776c6"
+green = "#8ef0a1"
+yellow = "#e6d37a"
+red = "#ff757f"
+muted = "#c0caf5"
 
 [os]
 disabled = false
 style = "fg:cyan"
-format = "[$symbol ]($style)"
+format = "[$symbol]($style) "
 
 [os.symbols]
 Macos = "󰀵"
@@ -46,27 +46,37 @@ Pop = ""
 show_always = true
 style_user = "fg:cyan"
 style_root = "fg:red"
-format = "[$user ]($style)"
+format = "[$user]($style) "
 
 [directory]
 style = "fg:yellow"
 truncation_length = 3
 truncation_symbol = ".../"
-format = "[$path ]($style)"
+format = "[$path]($style)"
 
 [git_branch]
 symbol = " "
 style = "fg:pink"
-format = "[$symbol$branch]($style) "
+format = "([ $symbol$branch]($style))"
 
 [git_status]
 style = "fg:muted"
-format = "[$all_status$ahead_behind]($style) "
+modified = "*"
+untracked = "?"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+conflicted = "!"
+stashed = "$"
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+format = "([ $all_status$ahead_behind]($style))"
 
 [character]
-success_symbol = "[❯](fg:green)"
-error_symbol = "[❯](fg:red)"
-vimcmd_symbol = "[❮](fg:green)"
-vimcmd_replace_one_symbol = "[❮](fg:pink)"
-vimcmd_replace_symbol = "[❮](fg:pink)"
-vimcmd_visual_symbol = "[❮](fg:yellow)"
+success_symbol = " [❯](fg:green)"
+error_symbol = " [❯](fg:red)"
+vimcmd_symbol = " [❮](fg:green)"
+vimcmd_replace_one_symbol = " [❮](fg:pink)"
+vimcmd_replace_symbol = " [❮](fg:pink)"
+vimcmd_visual_symbol = " [❮](fg:yellow)"
