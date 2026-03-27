@@ -1,33 +1,44 @@
-# Activate venv
-venv() {
-    source "$HOME/venv/bin/activate"
-}
+export ZSH="$HOME/.oh-my-zsh"
+# ZSH_THEME="robbyrussell"
 
-# Activate venv + launch JupyterLab
+export PATH="/opt/homebrew/bin:$PATH"
+
+plugins=(git sudo)
+
+source $ZSH/oh-my-zsh.sh
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias venv='source ~/venv/bin/activate'
 alias jlab='source ~/venv/bin/activate && jupyter lab'
 
-# Activate venv + download 1080p MP4
-ytmp4() {
-    source "$HOME/venv/bin/activate"
-    yt-dlp \
-        -f "bestvideo[height=1080][ext=mp4]+bestaudio[ext=m4a]" \
-        --merge-output-format mp4 \
-        --write-subs \
-        --sub-langs "en.*" \
-        --convert-subs srt \
-        --compat-options no-keep-subs \
-        -o "$HOME/Downloads/%(title)s.%(ext)s" \
-        "$1"
-}
+# Search
+alias h="history | grep"	# search command line history
+alias f="find . | grep"		# search files in current folder
 
-# Activate venv + download MP3
-ytmp3() {
-    source "$HOME/venv/bin/activate"
-    yt-dlp \
-        -f bestaudio \
-        --extract-audio \
-        --audio-format mp3 \
-        --audio-quality 4 \
-        -o "$HOME/Downloads/%(title)s.%(ext)s" \
-        "$1"
-}
+alias cp='cp -i'
+alias mv='mv -i'
+alias del='trash -v'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias cls='clear'
+
+alias da='date "+%Y-%m-%d %A %T %Z"'
+
+# alias la='ls -Alh'					# show hidden files
+# alias lh='ls -d .*'					# show only hidden files
+# alias ls='ls -aFh'					# add colors and file type extensions
+# alias lsize='ls -lSrh'				# sort by size
+# alias lext='ls -lXBh'				# sort by extension
+# alias lfile="ls -l | egrep -v '^d'" # files only
+# alias ldir="ls -l | egrep '^d'"		# directories only
+# alias lsdu='du -h -d 1'			 	# using du for ls to show size
+
+alias treed='tree -CAFd' # displays directory tree
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(starship init zsh)"
