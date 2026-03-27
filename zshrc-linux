@@ -43,8 +43,8 @@ eval "$(zoxide init zsh)"
 # alias l='ls -CF'
 
 # Search
-alias h="history | grep"        # search command line history
-alias f="find . | grep"         # search files in current folder
+alias h="history | grep"	# search command line history
+alias f="find . | grep"		# search files in current folder
 alias topcpu='ps -eo pid,user,pcpu,comm --sort=-pcpu | head'
 alias topmem='ps -eo pid,user,pmem,comm --sort=-pmem | head'
 
@@ -55,21 +55,24 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias del='trash -v'
 
-alias home='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
-alias la='ls -Alh'                                      # show hidden files
-alias lh='ls -A'                                        # show only hidden files
-alias ls='ls -aFh --color=always'       # add colors and file type extensions
-alias lsize='ls -lSrh'                          # sort by size
-alias lext='ls -lXBh'                           # sort by extension
+alias la='ls -Alh'					# show hidden files
+alias lh='ls -A'					# show only hidden files
+alias ls='ls -aFh --color=always'	# add colors and file type extensions
+alias lsize='ls -lSrh'				# sort by size
+alias lext='ls -lXBh'				# sort by extension
 alias lfile="ls -l | egrep -v '^d'" # files only
-alias ldir="ls -l | egrep '^d'"         # directories only
-alias lsdu='du -h --max-depth=1'        # using du for ls to show size
+alias ldir="ls -l | egrep '^d'"		# directories only
+alias lsdu='du -h --max-depth=1' 	# using du for ls to show size
 
 alias treed='tree -CAFd' # displays directory tree
+
+alias tsup='sudo systemctl start tailscaled && sudo tailscale up'
+alias tsdown='sudo tailscale down && sudo systemctl stop tailscaled'
+alias tsstatus='tailscale status'
 
 afetch
