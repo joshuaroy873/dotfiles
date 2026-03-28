@@ -1,0 +1,15 @@
+{
+    "workbench.layoutControl.enabled": false,
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "scm.inputFontFamily": "'JetBrainsMono Nerd Font'",
+    "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
+    "markdown.preview.fontFamily": "'JetBrains Mono', sans-serif",
+    "editor.wordWrap": "on",
+    "editor.cursorSmoothCaretAnimation": "on"
+}
