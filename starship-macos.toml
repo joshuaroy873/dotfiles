@@ -1,9 +1,14 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-format = "$os$username$directory$git_branch$git_status$character"
+# format = "$os$username$directory$git_branch$git_status$character"
+format = "$os$username$directory$python$git_branch$git_status$character"
 add_newline = false
 
 palette = "tokyo_like"
+
+[python]
+style = "fg:red"
+format = "([ (${virtualenv})]($style))"
 
 [palettes.tokyo_like]
 cyan = "#9fd6f4"
