@@ -44,9 +44,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # File listing
-alias ls='ls -aFh --color=always'                # colorized listing with type suffixes
+alias ls='ls -Fh --color=always'                # colorized listing with type suffixes
 alias la='ls -Alh'                               # detailed listing including hidden files
-alias lh='ls -A'                                 # show all except . and ..
 alias lsize='ls -lSrh'                           # sort by size
 alias lext='ls -lXBh'                            # sort by extension
 alias lfile="ls -l | egrep -v '^d'"              # files only
